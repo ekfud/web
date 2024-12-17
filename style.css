@@ -1,0 +1,273 @@
+body{
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #212529;
+  color : white;
+}
+
+header {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3));
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+#game_music{
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)), url(images/header1.webp);
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+#location_home {
+background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)), url(https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1619987722169-VV6ZASHHZNRBJW9X0PLK/Key_Art_02_layeredjpg.jpg);
+background-size: cover;
+background-position: center top;
+background-attachment: fixed;
+}
+
+#item_home {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)), url(images/header2.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+#NPC_home {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)), url(images/header3.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+#offical_home {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)), url(images/header4.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+#buy_link{
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)), url(images/header5.avif);
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+/*메인 페이지 동영상*/
+.video-background {
+background: #000;
+position: fixed;
+top: 0; right: 0; bottom: 0; left: 0;
+z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+}
+
+/*정보나열 css 디자인*/
+@media screen and (min-width: 1440px) {
+  .app-container,.app-container--width {
+      width:1366px
+  }
+  .span6 {
+      width: 584px
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width:1439px) {
+  .app-container,.app-container--width {
+      width:1128px
+  }
+  .span6 {
+      width: 482px
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width:1199px) {
+  .app-container,.app-container--width {
+      width:960px
+  }
+  .span6 {
+      width: 410px
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width:999px) {
+  .app-container,.app-container--width {
+      width:708px
+  }
+
+  .span6 {
+      width: 302px
+  }
+}
+
+@media screen and (min-width: 568px) and (max-width:719px) {
+  .app-container,.app-container--width {
+      width:540px
+  }
+  .span6 {
+      width: 134px
+  }
+
+}
+@media screen and (max-width: 567px) {
+  .app-container,.app-container--width {
+      width:316px
+  }
+
+  .span6 {
+      width: 134px
+  }
+}
+
+.timeline {
+list-style: none;
+padding-left: 0;
+position: relative;
+margin-bottom: 0;
+margin-top: -2px;
+}
+
+.timeline:before {
+transform: translateX(-50%);
+content: '';
+display: block;
+background-color: #fff;
+position: absolute;
+width: 194px;
+height: 100%;
+left: 50%;
+z-index: -2;
+}
+
+.timeline:after {
+left: 50%;
+content: '';
+display: block;
+background-color: #212529;
+width: 1px;
+height: 100%;
+position: absolute;
+z-index: -1;
+top: 0;
+}
+
+.app-container {
+  margin-left: auto;
+  margin-right: auto
+}
+
+.timeline__element{
+  float: right;
+  position: relative;
+  margin-top: 150px;
+  height: 460
+}
+
+.timeline__element.active .timeline-case{
+  -webkit-transform: translatey(0) translatez(0);
+  transform: translatey(0) translatez(0)
+}
+
+.timeline__element.active .timeline-case__date{
+  opacity: 1
+}
+
+.timeline__element .timeline-case{
+  -webkit-transform: translatey(150px) translatez(0);
+  transform: translatey(150px) translatez(0);
+  -webkit-transition: -webkit-transform 1s cubic-bezier(.19,1,.22,1) 0ms;
+  transition: -webkit-transform 1s cubic-bezier(.19,1,.22,1) 0ms;
+  transition: transform 1s cubic-bezier(.19,1,.22,1) 0ms;
+  transition: transform 1s cubic-bezier(.19,1,.22,1) 0ms,-webkit-transform 1s cubic-bezier(.19,1,.22,1) 0ms;
+  background-color: #fff;
+  height: 100%;
+  z-index: 2
+}
+
+
+.timeline__element .timeline-case__date{
+  display: block;
+  position: absolute;
+  border-bottom: 1px solid #212529;
+  color: #404040;
+  padding-bottom: 15px;
+  top: 32px;
+  opacity: 0;
+  -webkit-transition: opacity 1s cubic-bezier(.19,1,.22,1) 0ms;
+  transition: opacity 1s cubic-bezier(.19,1,.22,1) 0ms
+}
+
+.timeline__element .timeline-case__date--month{
+  display: block;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: bolder;
+  margin-top: -3px
+}
+
+
+.timeline__element.even {
+  float: left;
+  position: relative;
+  top: 150px
+}
+
+.timeline__element.even:nth-last-child(3) {
+  margin-bottom: 150px
+}
+
+
+.timeline__element.even .timeline-case__date{
+  -webkit-transform: translatey(-50%);
+  transform: translatey(-50%);
+  margin-left: 1px;
+  text-align: left;
+  left: 100%;
+  top: 50%;
+  display: block;
+  position: absolute;
+  padding-left: 15px
+}
+
+
+.timeline__element.even .timeline-case__glitter {
+  background-position: 1px 1px
+}
+
+
+.timeline__element.odd .timeline-case__date{
+  -webkit-transform: translatex(-100%);
+  transform: translatex(-100%);
+  text-align: right;
+  padding-right: 15px
+}
+
+
+.timeline__element .timeline-case__details{
+  background-color: #fff
+}
+
+
+.timeline-case {
+  position: relative
+}
+
+
+.timeline-case__glitter {
+  height: 311;
+  position: relative;
+  background-position: 0 1px
+}
+
+.timeline-case__details {
+  border-top: 1px solid #212529
+}
+
+
