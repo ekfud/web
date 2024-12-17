@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hollow-location</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top" alt="로고">
+                    Hollow Knight
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">목록</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#location_home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#about_location">페이지 소개</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                지역 목록
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#Dirtmouth">흙의 마을</a></li>
+                                    <li><a class="dropdown-item" href="#Forgotten_crossroads">잊혀진 교차로</a></li>
+                                    <li><a class="dropdown-item" href="#Greenpath">녹색 거리</a></li>
+                                    <li><a class="dropdown-item" href="#Fungal_wastes">버섯 황무지</a></li>
+                                    <li><a class="dropdown-item" href="#City_of_tears">눈물의 도시</a></li>
+                                    <li><a class="dropdown-item" href="#Crystal_peak">수정 봉우리</a></li>
+                                    <li><a class="dropdown-item" href="#Resting_grounds">안식의 땅</a></li>
+                                    <li><a class="dropdown-item" href="#Ancient_basin">고대의 분지</a></li>
+                                    <li><a class="dropdown-item" href="#Royal_waterways">왕국의 수로</a></li>
+                                    <li><a class="dropdown-item" href="#Kingdoms_edge">왕국의 끝자락</a></li>
+                                    <li><a class="dropdown-item" href="#Deepnest">깊은 둥지</a></li>
+                                    <li><a class="dropdown-item" href="#Fog_canyon">안개 협곡</a></li>
+                                    <li><a class="dropdown-item" href="#Howling_cliffs">울부짖는 벼랑</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <header id="location_home" class="d-flex flex-column justify-content-center align-items-center vh-100 text-white">
+            <img 
+            src="https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1617773200235-37F2RZTI6FCZ7Q2C27L0/logo_main.png"
+            width="800" height="317" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" alt="배너">
+        </header>
+
+        
+        <section id="about_location">
+            <div class="text-center py-5 text-white">
+                <h2 class="display-5 fw-bold">페이지 소개</h2>
+                <p class="lead">할로우 나이트는 메트로배니아 형식의 어드벤처 게임입니다. <br>신성둥지에는 다양한 지역들이 존재하며 해당 페이지는 지역에 관한 간단한 소개를 진행하며 지도를 제공합니다.</p>
+              </div>
+        </section>
+
+        <hr>
+
+        <!--모달 목록들-->
+        <div class="modal fade" id="dirtmouth" tabindex="-1" aria-labelledby="dirt" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-black" id="dirt">흙의 마을 지도</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="ratio ratio-16x9">
+                        <div class="card">
+                            <img src="images2/Dirtmouth_Map.jpg" alt="흙의 마을 상세 지도">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="forgottencrossroads" tabindex="-1" aria-labelledby="road" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-black" id="road">잊혀진 교차로 지도</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="ratio ratio-16x9">
+                        <div class="card">
+                            <img src="images2/Crossroads_Map.jpg" alt="잊혀진 교차로 상세 지도">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="greenpath" tabindex="-1" aria-labelledby="green" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-black" id="green">녹색 거리 지도</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="ratio ratio-16x9">
+                        <div class="card">
+                            <img src="images2/Greenpath_Map.jpg" alt="녹색 거리 상세 지도">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="fungalwastes" tabindex="-1" aria-labelledby="fungal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-black" id="fungal">버섯 황무지 지도</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="ratio ratio-16x9">
+                        <div class="card">
+                            <img src="images2/Fungal_Map.jpg" alt="버섯 황무지 상세 지도">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="cityoftear" tabindex="-1" aria-labelledby="tear" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-black" id="tear">눈물의 도시 지도</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="ratio ratio-16x9">
+                        <div class="card">
+                            <img src="images2/City_Map.jpg" alt="눈물의 도시 상세 지도">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="crystalpeak" tabindex="-1" aria-labelledby="peak" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-black" id="peak">수정 봉우리 지도</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="ratio ratio-16x9">
+                        <div class="card">
+                            <img src="images2/Crystal_Map.jpg" alt="수정 봉우리 상세 지도">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="restinggrounds" tabindex="-1" aria-labelledby="rest" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-black" id="rest">안식의 땅 지도</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="ratio ratio-16x9">
+                        <div class="card">
+                            <img src="images2/Grounds_Map.jpg" alt="안식의 땅 상세 지도">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="ancientbasin" tabindex="-1" aria-labelledby="basin" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-black" id="basin">고대의 분지 지도</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="ratio ratio-16x9">
+                        <div class="card">
+                            <img src="images2/Ancient_Map.jpg" alt="고대의 분지 상세 지도">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="royalwaterways" tabindex="-1" aria-labelledby="royal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-black" id="royal">왕국의 수로 지도</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="ratio ratio-16x9">
+                        <div class="card">
+                            <img src="images2/Waterways_Map.jpg" alt="왕국의 수로 상세 지도">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="kingdomsedge" tabindex="-1" aria-labelledby="edge" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-black" id="edge">왕국의 끝자락 지도</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="ratio ratio-16x9">
+                        <div class="card">
+                            <img src="images2/Edge_Map.jpg" alt="왕국의 끝자락 상세 지도">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="deepnest" tabindex="-1" aria-labelledby="deep" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-black" id="deep">깊은 둥지 지도</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="ratio ratio-16x9">
+                        <div class="card">
+                            <img src="images2/Deepnest_Map.jpg" alt="깊은 둥지 상세 지도">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="fogcanyon" tabindex="-1" aria-labelledby="fog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-black" id="fog">안개 협곡 지도</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="ratio ratio-16x9">
+                        <div class="card">
+                            <img src="images2/Canyon_Map.jpg" alt="안개 협곡 상세 지도">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="howlingcliffs" tabindex="-1" aria-labelledby="howling" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-black" id="howling">울부짖는 벼랑 지도</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="ratio ratio-16x9">
+                        <div class="card">
+                            <img src="images2/Cliffs_Map.jpg" alt="울부짖는 벼랑 상세 지도">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="m-5">
+            <div class="card border-light bg-dark text-white mx-auto" style="max-width: 900px;">
+                <div class="row g-3">
+                    <div class="col-md-2" >
+                        <img src="images3/map.png" class="m-5" alt="지도와 깃펜">
+                    </div>
+                    
+                    <div class="col-md-9 px-lg-2 m-4">
+                        <div class="card-body">
+                            <h4 class="display-5 fw-bold mt-4">Location Infomation</h4>
+                            <p>할로우 나이트는 메트로배니아 형식의 어드벤처 게임입니다. 신성둥지에는 다양한 지역들이 존재하며 해당 페이지는 지역에 관한 간단한 소개를 진행하며 지도를 제공합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-container">
+                <ul class="timeline">
+                    <li class="timeline__element span6 odd active" id="Dirtmouth">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#1</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card">
+                                    <img src="images2/dirtmouth.jpg" alt="흙의 마을">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class="col-lg-9 text-black">
+                                            <h5 class="card-title">흙의 마을</h5>
+                                            <p class="card-text ">신성둥지의 위, 지상에 외로이 서있는 마을입니다.</p>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <button type="button" class="btn border-danger bg-white text-danger px-4 py-2 fw-semibold" data-bs-toggle="modal"
+                                            data-bs-target="#dirtmouth">
+                                                상세 지도
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Forgotten_crossroads">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#2</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card">
+                                <img src="images2/crossroads.jpg" alt="잊혀진 교차로">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class="col-lg-9 text-black">
+                                            <h5 class="card-title">잊혀진 교차로</h5>
+                                            <p class="card-text ">지상과 다른 지역들을 잇는 교차로입니다.</p>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <button type="button" class="btn border-danger bg-white text-danger px-4 py-2 fw-semibold" data-bs-toggle="modal"
+                                            data-bs-target="#forgottencrossroads">
+                                                상세 지도
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Greenpath">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#3</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card">
+                                <img src="images2/greenpath.jpg" alt="녹색 거리">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class="col-lg-9 text-black">
+                                            <h5 class="card-title">녹색 거리</h5>
+                                            <p class="card-text ">푸른 식물과 이끼로 뒤덮힌 순례자의 거리입니다.</p>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <button type="button" class="btn border-danger bg-white text-danger px-4 py-2 fw-semibold" data-bs-toggle="modal"
+                                            data-bs-target="#greenpath">
+                                                상세 지도
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Fungal_wastes">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#4</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card">
+                                <img src="images2/fungal.jpg" alt="버섯 황무지">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class="col-lg-9 text-black">
+                                            <h5 class="card-title">버섯 황무지</h5>
+                                            <p class="card-text ">곰팡이의 번식지이자 왕국으로 통하는 문이 있는 장소입니다.</p>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <button type="button" class="btn border-danger bg-white text-danger px-4 py-2 fw-semibold" data-bs-toggle="modal"
+                                            data-bs-target="#fungalwastes">
+                                                상세 지도
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="City_of_tears">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#5</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card">
+                                <img src="images2/city.jpg" alt="눈물의 도시">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class="col-lg-9 text-black">
+                                            <h5 class="card-title">눈물의 도시</h5>
+                                            <p class="card-text ">빗물이 눈물 처럼 쏟아지는 신성둥지의 옛 수도입니다.</p>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <button type="button" class="btn border-danger bg-white text-danger px-4 py-2 fw-semibold" data-bs-toggle="modal"
+                                            data-bs-target="#cityoftear">
+                                                상세 지도
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Crystal_peak">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#6</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card">
+                                <img src="images2/crystal.jpg" alt="수정 봉우리">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class="col-lg-9 text-black">
+                                            <h5 class="card-title">수정 봉우리</h5>
+                                            <p class="card-text ">분홍색 크리스탈을 채굴하는 지상 위의 봉우리입니다.</p>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <button type="button" class="btn border-danger bg-white text-danger px-4 py-2 fw-semibold" data-bs-toggle="modal"
+                                            data-bs-target="#crystalpeak">
+                                                상세 지도
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Resting_grounds">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#7</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card">
+                                <img src="images2/grounds.jpg" alt="안식의 땅">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class="col-lg-9 text-black">
+                                            <h5 class="card-title">안식의 땅</h5>
+                                            <p class="card-text ">죽은 곤충이 묻혀 안식을 누리는 평온의 땅입니다.</p>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <button type="button" class="btn border-danger bg-white text-danger px-4 py-2 fw-semibold" data-bs-toggle="modal"
+                                            data-bs-target="#restinggrounds">
+                                                상세 지도
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Ancient_basin">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#8</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card">
+                                <img src="images2/ancient.jpg" alt="고대의 분지">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class="col-lg-9 text-black">
+                                            <h5 class="card-title">고대의 분지</h5>
+                                            <p class="card-text ">수도 아래, 왕국의 터가 남아있는 고대의 지역입니다.</p>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <button type="button" class="btn border-danger bg-white text-danger px-4 py-2 fw-semibold" data-bs-toggle="modal"
+                                            data-bs-target="#ancientbasin">
+                                                상세 지도
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Royal_waterways">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#9</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card">
+                                <img src="images2/waterways.jpg" alt="왕국의 수로">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class="col-lg-9 text-black">
+                                            <h5 class="card-title">왕국의 수로</h5>
+                                            <p class="card-text ">한 때의 악취가 씻겨져 나간 신성둥지의 수로입니다.</p>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <button type="button" class="btn border-danger bg-white text-danger px-4 py-2 fw-semibold" data-bs-toggle="modal"
+                                            data-bs-target="#royalwaterways">
+                                                상세 지도
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Kingdoms_edge">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#10</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card">
+                                <img src="images2/edge.jpg" alt="왕국의 끝자락">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class="col-lg-9 text-black">
+                                            <h5 class="card-title">왕국의 끝자락</h5>
+                                            <p class="card-text ">새하얀 무언가가 휘날리는 왕국의 외곽 지역입니다.</p>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <button type="button" class="btn border-danger bg-white text-danger px-4 py-2 fw-semibold" data-bs-toggle="modal"
+                                            data-bs-target="#kingdomsedge">
+                                                상세 지도
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Deepnest">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#11</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card">
+                                <img src="images2/deepnest.jpg" alt="깊은 둥지">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class="col-lg-9 text-black">
+                                            <h5 class="card-title">깊은 둥지</h5>
+                                            <p class="card-text ">신성둥지와의 화합을 거절한 야수들의 거주지입니다.</p>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <button type="button" class="btn border-danger bg-white text-danger px-4 py-2 fw-semibold" data-bs-toggle="modal"
+                                            data-bs-target="#deepnest">
+                                                상세 지도
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Fog_canyon">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#12</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card">
+                                <img src="images2/canyon.jpg" alt="안개 협곡">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class="col-lg-9 text-black">
+                                            <h5 class="card-title">안개 협곡</h5>
+                                            <p class="card-text ">안개와 해파리들로 가득찬 산성 협곡입니다.</p>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <button type="button" class="btn border-danger bg-white text-danger px-4 py-2 fw-semibold" data-bs-toggle="modal"
+                                            data-bs-target="#fogcanyon">
+                                                상세 지도
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Howling_cliffs">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#13</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card">
+                                <img src="images2/cliffs.jpg" alt="울부짖는 벼랑">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class="col-lg-9 text-black">
+                                            <h5 class="card-title">울부짖는 벼랑</h5>
+                                            <p class="card-text ">돌풍이 불어오는 왕국 너머의 지역입니다.</p>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <button type="button" class="btn border-danger bg-white text-danger px-4 py-2 fw-semibold" data-bs-toggle="modal"
+                                            data-bs-target="#howlingcliffs">
+                                                상세 지도
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span6 page-splitter" data-page="1" id="1"></li>
+                    <li class="clearfix"></li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="bg-black text-white text-center">
+            <div class="container text-center">
+                <p class="py-4 mb-0">Copyright <i class="bi bi-c-circle"></i>2024 Designed by
+                <a href="https://www.teamcherry.com.au/" target="_blank" class="gugi-font link-danger text-decoration-none">Team Cherry</a></p>
+            </div>
+        </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,1171 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hollow-item</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.png" width="24" height="24" class="d-inline-block align-text-top" alt="로고">
+                    Hollow Knight
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">목록</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#item_home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about_item">페이지 소개</a>
+                            </li>
+                            <li class="nav-item mt-2">아이템 목록</a></li>
+                            <hr>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                대못 목록
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#Nail_1">오래된 대못</a></li>
+                                    <li><a class="dropdown-item" href="#Nail_2">날카로운 대못</a></li>
+                                    <li><a class="dropdown-item" href="#Nail_3">혈조 파인 대못</a></li>
+                                    <li><a class="dropdown-item" href="#Nail_4">휘감긴 대못</a></li>
+                                    <li><a class="dropdown-item" href="#Nail_5">본연의 대못</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                대못 기술 목록
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#Cycolone_slash">회오리 참격</a></li>
+                                    <li><a class="dropdown-item" href="#Dash_slash">대시 참격</a></li>
+                                    <li><a class="dropdown-item" href="#Great_slash">강력한 참격</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                업그레이드 목록
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#Mask">가면</a></li>
+                                    <li><a class="dropdown-item" href="#Vessel">그릇</a></li>
+                                    <li><a class="dropdown-item" href="#Pale_ore">창백한 광석</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                영혼 기술 목록
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#Focus">집중</a></li>
+                                    <li><a class="dropdown-item" href="#Vengeful_spirit">복수의 영령</a></li>
+                                    <li><a class="dropdown-item" href="#Shade_soul">그림자의 영혼</a></li>
+                                    <li><a class="dropdown-item" href="#Desolate_dive">고독한 강하</a></li>
+                                    <li><a class="dropdown-item" href="#Descending_dark">암흑의 강림</a></li>
+                                    <li><a class="dropdown-item" href="#Howling_wraiths">울부짖는 원혼들</a></li>
+                                    <li><a class="dropdown-item" href="#Abyss_shriek">심연의 비명</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                몽환 소지품 목록
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#Dream_nail">몽환의 대못</a></li>
+                                    <li><a class="dropdown-item" href="#Awoken_dream">각성한 몽환의 대못</a></li>
+                                    <li><a class="dropdown-item" href="#Dreamgate">꿈의 관문</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                능력 강화 목록
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#Mothwing_cloak">나방 날개 망토</a></li>
+                                    <li><a class="dropdown-item" href="#Shade_cloak">그림자 망토</a></li>
+                                    <li><a class="dropdown-item" href="#Mantis_claw">사마귀 갈고리</a></li>
+                                    <li><a class="dropdown-item" href="#Crystal_heart">수정 심장</a></li>
+                                    <li><a class="dropdown-item" href="#Monarch_wings">제왕의 날개</a></li>
+                                    <li><a class="dropdown-item" href="#Ismas_tear">이스마의 눈물</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                편의성 소지품 목록
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#Tram_pass">노면전차 탑승권</a></li>
+                                    <li><a class="dropdown-item" href="#Lumafly_lantern">빛파리 등불</a></li>
+                                    <li><a class="dropdown-item" href="#Map_and_quill">지도와 깃펜</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                열쇠 목록
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#Simple_key">간단한 열쇠</a></li>
+                                    <li><a class="dropdown-item" href="#Shopkeepers_key">상점 주인의 열쇠</a></li>
+                                    <li><a class="dropdown-item" href="#City_crest">도시의 문장</a></li>
+                                    <li><a class="dropdown-item" href="#Elegant_key">우아한 열쇠</a></li>
+                                    <li><a class="dropdown-item" href="#Love_key">사랑의 열쇠</a></li>
+                                    <li><a class="dropdown-item" href="#Kings_brand">왕의 표식</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                화폐 목록
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#Geo">지오</a></li>
+                                    <li><a class="dropdown-item" href="#Wanderers_journal">방랑자의 일지</a></li>
+                                    <li><a class="dropdown-item" href="#Hallownest_seal">신성둥지의 문양</a></li>
+                                    <li><a class="dropdown-item" href="#Kings_idol">왕의 우상</a></li>
+                                    <li><a class="dropdown-item" href="#Arcane_egg">신비의 알</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                기타 소지품 목록
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#Godtuner">신 조율기</a></li>
+                                    <li><a class="dropdown-item" href="#Rancid_egg">썩은 알</a></li>
+                                    <li><a class="dropdown-item" href="#Delicate_flower">연약한 꽃</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <header id="item_home" class="d-flex flex-column justify-content-center align-items-center vh-100 text-white">
+            <img 
+            src="https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1617773200235-37F2RZTI6FCZ7Q2C27L0/logo_main.png"
+            width="800" height="317" sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw" alt="배너">
+        </header>
+
+        <section id="about_item">
+            <div class="text-center py-5 text-white">
+                <h2 class="display-5 fw-bold">페이지 소개</h2>
+                <p class="lead">할로우 나이트는 탐험과 전투를 통해 게임을 진행해나갑니다.<br>해당 페이지는 신성둥지에 숨겨진 다양한 소지품에 관한 간단한 소개를 진행합니다.</p>
+              </div>
+        </section>
+        <hr>
+
+        <section class="m-5">
+            <div class="card border-light bg-dark text-white mx-auto" style="max-width: 900px;">
+                <div class="row g-4">
+                    <div class="col-md-2">
+                        <img src="images3/journal.webp" class="m-5" alt="일지">
+                    </div>
+                    
+                    <div class="col-md-9 p-lg-2 mx-4">
+                        <div class="card-body">
+                            <h4 class="display-5 fw-bold mt-4">Item Infomation</h4>
+                            <p>할로우 나이트는 탐험을 하며 다양한 소지품을 얻을 수 있습니다. 전투에 도움이 되기도 하고 막힌 길을 뚫을 수 있는 스킬을 얻을 수도 있습니다. 때로는 아이템을 팔아 화폐를 확보할 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-container">
+                <ul class="timeline">
+                    <li class="timeline__element span6 odd active" id="Nail_1">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#1</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Nail_1_Old_Nail.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="오래된 대못">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class="text-black">
+                                            <h5 class="card-title">오래된 대못</h5>
+                                            <p class="card-text ">신성둥지의 전통적인 무기입니다. 세월과 마모로 인해 날이 무뎌졌습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Nail_2">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#2</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Nail_2_Sharpened_Nail.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="날카로운 대못">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class="text-black">
+                                            <h5 class="card-title">날카로운 대못</h5>
+                                            <p class="card-text ">치명적인 형태로 복원된 전통적인 무기입니다. 무딘 날이 갈려졌습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Nail_3">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#3</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Nail_3_Channelled_Nail.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block bg-dark" alt="혈조 파인 대못">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class="text-black">
+                                            <h5 class="card-title">혈조 파인 대못</h5>
+                                            <p class="card-text ">신성둥지의 갈라진 무기입니다. 날이 절묘하게 균형 잡혔습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Nail_4">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#4</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Nail_4_Coiled_Nail.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="휘감긴 대못">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">휘감긴 대못</h5>
+                                            <p class="card-text ">더욱 더 제련된 신성둥지의 강력한 무기입니다. 지금까지의 무기를 뛰어넘었습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Nail_5">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#5</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Nail_5_Pure_Nail.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="본연의 대못">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">본연의 대못</h5>
+                                            <p class="card-text ">진정한 모습을 드러낸 신성둥지의 궁극적인 무기입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Cycolone_slash">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#6</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Cyclone_Slash.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="회오리 참격">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">회오리 참격</h5>
+                                            <p class="card-text ">대못사부 마토의 대못 기술입니다. 좌우로 대못을 회전시킵니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Dash_slash">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#7</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Dash_Slash.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="대시 참격">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">대시 참격</h5>
+                                            <p class="card-text ">대못사부 오로의 대못 기술입니다. 빠르게 돌진하며 공격합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Great_slash">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#8</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Great_Slash.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="강력한 참격">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">강력한 참격</h5>
+                                            <p class="card-text ">대못사부 셰오의 대못 기술입니다. 강력한 참격을 펼칠 수 있습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Mask">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#9</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Mask-Shard.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="가면">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">가면</h5>
+                                            <p class="card-text ">자신을 보호하기 위해 착용하는 고대 가면입니다. 조각을 모아 껍데기를 강화할 수 있습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Vessel">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#10</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Full_Soul_Vessel.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="그릇">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">그릇</h5>
+                                            <p class="card-text ">영혼을 담는 하얀 그릇입니다. 조각을 모아 그릇을 완성해 더 많은 영혼을 모을 수 있습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Pale_ore">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#11</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Pale_Ore.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="창백한 광석">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">창백한 광석</h5>
+                                            <p class="card-text ">무기를 제련할 때 쓰이는 희귀하고 창백한 금속입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Focus">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#12</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Focus_inventory.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="집중">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">집중</h5>
+                                            <p class="card-text ">수집한 영혼으로 껍데기를 수리하고 상처를 치유할 수 있습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Vengeful_spirit">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#13</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Vengeful_Spirit_Icon.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="복수의 영령">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">복수의 영령</h5>
+                                            <p class="card-text ">영혼을 사용하여 일직선으로 적을 불태우는 영령을 소환합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Shade_soul">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#14</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Shade_Soul_Icon.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="그림자의 영혼">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">그림자의 영혼</h5>
+                                            <p class="card-text ">영혼을 사용하여 일직선으로 적을 불태우는 강화된 그림자를 소환합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Desolate_dive">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#15</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Desolate_Dive_Icon.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="고독한 강하">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">고독한 강하</h5>
+                                            <p class="card-text ">영혼을 사용하여 땅에 돌진합니다. 적과 함께 취약한 구조물을 파괴할 수 있습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Descending_dark">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#16</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Descending_Dark_Icon.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="암흑의 강림">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">암흑의 강림</h5>
+                                            <p class="card-text ">영혼을 사용하여 그림자와 함께 땅에 돌진합니다. 강화된 힘으로 적과 구조물을 파괴합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Howling_wraiths">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#17</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Howling_Wraiths_Icon.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="울부짖는 원혼들">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">울부짖는 원혼들</h5>
+                                            <p class="card-text ">영혼을 사용하여 머리 위를 향해 비명을 지르는 영혼을 소환합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Abyss_shriek">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#18</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Abyss_Shriek_Icon.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="심연의 비명">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">심연의 비명</h5>
+                                            <p class="card-text ">영혼을 사용하여 머리 위를 향해 더욱 강한 힘으로 비명을 지르는 영혼과 그림자를 소환합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Dream_nail">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#19</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Dream_Nail.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="몽환의 대못">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">몽환의 대못</h5>
+                                            <p class="card-text ">꿈과 현실 사이의 장벽을 베어 숨겨진 꿈을 드러내거나 관문을 여는 데 사용할 수 있습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Awoken_dream">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#20</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Awoken_Dream_Nail_Icon.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="각성한 몽환의 대못">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">각성한 몽환의 대못</h5>
+                                            <p class="card-text ">몽환의 대못이 각성하여 강력하게 보호된 꿈과 기억에도 들어갈 수 있습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Dreamgate">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#21</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Icon_HK_Dreamgate.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="꿈의 관문">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">꿈의 관문</h5>
+                                            <p class="card-text ">꿈과의 연결이 약한 몇몇 지역을 제외한 장소에 꿈을 통해 즉시 이동이 가능합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Mothwing_cloak">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#22</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Mothwing_Cloak_Icon.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="나방 날개 망토">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">나방 날개 망토</h5>
+                                            <p class="card-text ">나방 날개 가닥으로 꼰 망토입니다. 착용자는 지면과 허공에서 돌진할 수 있습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Shade_cloak">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#23</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Shade_Cloak_Icon.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="그림자 망토">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">그림자 망토</h5>
+                                            <p class="card-text ">심연의 물질로 만들어진 망토입니다. 착용자는 피해 없이 적과 공격을 관통해 돌진할 수 있습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Mantis_claw">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#24</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Mantis_Claw.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="사마귀 갈고리">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">사마귀 갈고리</h5>
+                                            <p class="card-text ">뼈를 갈아 만든 발톱입니다. 갈고리를 이용해 벽에 붙어 도약이 가능합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Crystal_heart">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#25</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Crystal_Heart_Icon.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="수정 심장">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">수정 심장</h5>
+                                            <p class="card-text ">수정으로 이루어진 에너지 핵입니다. 착용자는 빠른 돌진이 가능합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Monarch_wings">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#26</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Monarch_Wings_Icon.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="제왕의 날개">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">제왕의 날개</h5>
+                                            <p class="card-text ">천상의 물질로 만든 날개입니다. 공중에서 다시 점프가 가능합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Ismas_tear">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#27</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Ismas_Tear.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="이스마의 눈물">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">이스마의 눈물</h5>
+                                            <p class="card-text ">눈물 한 방울이 굳어 형성된 과일입니다. 섭취 시 산성 웅덩이로부터 보호됩니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Tram_pass">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#28</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Tram_Pass.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="노면전차 탑승권">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">노면전차 탑승권</h5>
+                                            <p class="card-text ">신성둥지의 몇몇 부분을 연결하는 전차의 평생 탑승권입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Lumafly_lantern">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#29</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Lumafly_Lantern.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="빛파리 등불">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">빛파리 등불</h5>
+                                            <p class="card-text ">빛파리가 담긴 수정 등불입니다. 어두운 동굴을 밝힐 수 있습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Map_and_quill">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#30</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/map.png" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="지도와 깃펜">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">지도와 깃펜</h5>
+                                            <p class="card-text ">신성둥지의 지도입니다. 깃펜을 이용하여 지도를 갱신할 수 있습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Simple_key">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#31</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Simple_Key.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="간단한 열쇠">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">간단한 열쇠</h5>
+                                            <p class="card-text ">간단한 자물쇠를 열 수 있는 흔한 디자인의 열쇠입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Shopkeepers_key">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#32</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Shopkeepers_Key.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="상점 주인의 열쇠">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">상점 주인의 열쇠</h5>
+                                            <p class="card-text ">상점 주인의 형상을 한 작은 황동 열쇠입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="City_crest">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#33</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/City_Crest.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="도시의 문장">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">도시의 문장</h5>
+                                            <p class="card-text ">신성둥지 수도의 문장을 지닌 석판입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Elegant_key">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#34</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Elegant_Key.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="우아한 열쇠">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">우아한 열쇠</h5>
+                                            <p class="card-text ">영혼 성소의 표식을 지닌 백색 금속으로 만든 화려한 장식의 열쇠입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Love_key">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#35</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Love_Key.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="사랑의 열쇠">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">사랑의 열쇠</h5>
+                                            <p class="card-text ">패딩으로 덮여있는 사랑의 상징입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Kings_brand">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#36</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Kings_Brand_inventory.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="왕의 표식">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">왕의 표식</h5>
+                                            <p class="card-text ">착용자를 왕으로 표시하는 낙인입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Geo">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#37</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                <img src="images3/geo.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="지오">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">지오</h5>
+                                            <p class="card-text ">반짝이는 이 돌은 신성둥지의 화폐입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Wanderers_journal">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#38</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/journal.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="방랑자의 일지">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">방랑자의 일지</h5>
+                                            <p class="card-text ">오래전에 죽인 방랑자가 남긴 일지입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Hallownest_seal">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#39</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Hallownest_Seal.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="신성둥지의 문양">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">신성둥지의 문양</h5>
+                                            <p class="card-text ">왕과 기사단의 권위를 상징하는 신성둥지의 공식 문양입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Kings_idol">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#40</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Kings_Idol.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="왕의 우상">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">왕의 우상</h5>
+                                            <p class="card-text ">신성둥지의 왕을 묘사한 백색 우상입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Arcane_egg">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#41</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images/Arcane_Egg.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="신비의 알">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">신비의 알</h5>
+                                            <p class="card-text ">신성둥지의 탄생 이전부터 전해오는 신비한 돌 알입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Godtuner">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#42</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Godtuner.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="신 조율기">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">신 조율기</h5>
+                                            <p class="card-text ">큰 힘을 가진 이들에게 공명을 느끼는 장치입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 odd active" id="Rancid_egg">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#43</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Rancid_Egg.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="썩은 알">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">썩은 알</h5>
+                                            <p class="card-text ">강력한 부패의 악취를 내뿜는 썩은 알입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline__element span6 even active" id="Delicate_flower">
+                        <time class="timeline-case__date">
+                            <span class="timeline-case__date--month">#44</span>
+                        </time>
+                        <div class="timeline-case">
+                            <div class="timeline-case__glitter">
+                                <div class="card bg-dark border-light text-center" style="height:311px;">
+                                    <img src="images3/Delicate_Flower.webp" style="width: auto; height: auto;" class="mx-auto my-auto d-block" alt="연약한 꽃">
+                                </div>
+                            </div>
+                            <div class="timeline-case__details">
+                                <div class="container">
+                                    <div class="row px-4 py-3">
+                                        <div class=" text-black">
+                                            <h5 class="card-title">연약한 꽃</h5>
+                                            <p class="card-text ">안식의 땅에서 전달을 부탁받은 연약한 꽃입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span6 page-splitter" data-page="1" id="1"></li>
+                    <li class="clearfix"></li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="bg-black text-white text-center">
+            <div class="container text-center">
+                <p class="py-4 mb-0">Copyright <i class="bi bi-c-circle"></i>2024 Designed by
+                <a href="https://www.teamcherry.com.au/" target="_blank" class="gugi-font link-danger text-decoration-none">Team Cherry</a></p>
+            </div>
+        </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
